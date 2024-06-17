@@ -4035,7 +4035,7 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #ffff00;
-  background-color: #fff;
+  background-color: #ffffff00;
   border-color: #d8dde6 #d8dde6 #fff;
 }
 .nav-tabs .dropdown-menu {
@@ -16623,6 +16623,10 @@ select.form-control.form-control-soft-dark:focus::-ms-value {
   width: auto;
 }
 
+.navbar-dark{
+  background-color: #000000;
+}
+
 .navbar-dark .navbar-brand .navbar-brand-text,
 .navbar-dark .navbar-brand .navbar-brand-img {
   filter: brightness(0) invert(1);
@@ -20318,4 +20322,15 @@ button.mfp-arrow.mfp-arrow-right::after {
 
 .slick-dotted.slick-slider.dots-light .slick-dots li button {
   background: #fff;
+}
+
+/* Adicionar esta regra ao seu arquivo theme.css ou theme.min.css */
+@media (max-width: 1080px) {
+  .site-navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Mantém o cabeçalho com fundo semi-transparente */
+  }
+}
+
+#trabalho p {
+  text-align: justify;
 }

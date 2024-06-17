@@ -698,26 +698,42 @@ License: https://themeforest.net/licenses/standard
   }
 
   // [11. Slider]
+
   function ln_slider() {
     var slider = $('.slider');
-
-    if(slider.length > 0){
-      if( getWindowWidth() >= 992 && getWindowHeight() >= 768 ){
-        if( !slider.hasClass('slick-initialized') ){
-          slider.slick({
-            slidesToShow: 1,
-            infinite: true,
-            nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
-            prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>'
-          });
+    if (slider.length > 0) {
+        if (!slider.hasClass('slick-initialized')) {
+            slider.slick({
+                slidesToShow: 1,
+                infinite: true,
+                dots: true,
+                arrows: true,
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>'
+            });
         }
-      } else {
-        if( slider.hasClass('slick-initialized') ){
-          slider.slick('unslick');
-        }
-      }
     }
-  }
+}
+  // function ln_slider() {
+  //   var slider = $('.slider');
+
+  //   if(slider.length > 0){
+  //     if( getWindowWidth() >= 992 && getWindowHeight() >= 768 ){
+  //       if( !slider.hasClass('slick-initialized') ){
+  //         slider.slick({
+  //           slidesToShow: 1,
+  //           infinite: true,
+  //           nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+  //           prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>'
+  //         });
+  //       }
+  //     } else {
+  //       if( slider.hasClass('slick-initialized') ){
+  //         slider.slick('unslick');
+  //       }
+  //     }
+  //   }
+  // }
 
   // [12. Subscribe Form]
   function ln_subscribeForm(){

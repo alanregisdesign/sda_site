@@ -1,1 +1,122 @@
-﻿/* Place Your Custom Styles Here */
+﻿/* Ensure carousel images maintain aspect ratio and are not cropped */
+.slider .portfolio-item .media-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* This ensures the whole image fits inside the container */
+  }
+  
+  /* Keep the text on the left and the image on the right for resolutions up to 1080p */
+  @media (max-width: 1920px) {
+    .slider .portfolio-item .row {
+      display: flex;
+      align-items: center; /* Ensure vertical alignment */
+    }
+    .slider .portfolio-item .col-lg-7 {
+      order: 2;
+    }
+    .slider .portfolio-item .col-lg-5 {
+      order: 1;
+    }
+
+    .slick-prev {
+        left: 41%;
+      }
+      
+      .slick-next {
+        right: 1%;
+      }
+  }
+  
+  /* Ensure the layout remains text on the left and image on the right up to 1366px */
+  @media (max-width: 1366px) {
+    .slider .portfolio-item .row {
+      display: flex;
+      align-items: center; /* Ensure vertical alignment */
+      flex-direction: row;
+    }
+    .slider .portfolio-item .col-lg-7 {
+      order: 2;
+      max-width: 55%;
+    }
+    .slider .portfolio-item .col-lg-5 {
+      order: 1;
+      max-width: 45%;
+    }
+
+    .slick-prev {
+        left: 41%;
+      }
+      
+      .slick-next {
+        right: 1%;
+      }
+  }
+  
+  /* Additional responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .slider .portfolio-item .row {
+      flex-direction: column;
+    }
+    .slider .portfolio-item .col-lg-7,
+    .slider .portfolio-item .col-lg-5 {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+    .slider .portfolio-item .col-lg-5 {
+      margin-top: 20px;
+    }
+    .ln-section h1, .ln-section h2, .ln-section h3, .ln-section h4 {
+      font-size: 1.5rem;
+    }
+    .ln-section p {
+      font-size: 1rem;
+    }
+    .btn {
+      font-size: 0.875rem;
+      padding: 10px 20px;
+    }
+
+    .slick-prev {
+        left: 41%;
+      }
+      
+      .slick-next {
+        right: 1%;
+      }
+  }
+  
+  /* Position the carousel navigation buttons inside the image box */
+  .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: #000; /* Change the background color */
+    color: #fff; /* Change the arrow color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .slick-prev {
+    color: transparent;
+    background-color: transparent;
+  }
+  
+  .slick-next {
+    color: transparent;
+    background-color: transparent;
+  }
+  
+  
+.mb-8, .my-8 {
+  margin-bottom: 1rem !important;
+}
+
+.pt-lg-8, .py-lg-8 {
+    padding-top: 0 !important;
+  }
